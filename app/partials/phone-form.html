@@ -1,0 +1,33 @@
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span2">
+            <form >
+                <p><label>Carrier:</label> <input type="text" name="phone.carrier" ng:model="phone.carrier" /></p>
+                <p><label>Id:</label> <input type="text" name="phone._id" ng:model="phone._id" /></p>
+                <p><label>Image URL:</label> <input type="text" name="phone.imageUrl" ng:model="phone.imageUrl" /></p>
+                <p><label>Name:</label> <input type="text" name="phone.name" ng:model="phone.name" /></p>
+                <p><label>Snippet:</label> <input type="text" name="phone.snippet" ng:model="phone.snippet" /></p>
+                <p><label>Age:</label> <input type="text" name="phone.age" ng:model="phone.age" /></p>
+                <p><label>Teste:</label> <input type="text" name="phone.age" ng:model="phone.teste" /></p>
+                 
+                    <button class='btn ' ng-click="go('/phones')">Cancel</button>
+                    <!-- 
+                        <a href="#/" class="btn">Cancel</a>
+                        This works well as a button BUT it does not sit on the same baseline as 
+                        proper buttons. That's why using proper button for cancel.
+                     -->
+
+                    <button class='btn btn-primary' ng-click="save()">Save</button>
+                
+            </form>    
+        </div>
+        <div class="span10">
+Debug View:
+<pre class='pre-scrollable'>form={{phone|json}} <br>
+age={{phone.age}} <br> carrier={{phone.carrier}} <br> _id={{phone._id}}  </pre>
+        </div>
+    </div>
+</div>
+
+
+  

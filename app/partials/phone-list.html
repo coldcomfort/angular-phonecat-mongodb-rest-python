@@ -1,0 +1,42 @@
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span1">
+
+      <ul class="controls">
+        <li>
+          Filter: <input type="text" ng-model="query" name="query"/>
+        </li>
+        <li>
+          Sort by:
+          <select name="orderProp">
+            <option value="name">Alphabetical</option>
+            <option value="age">Newest</option>
+          </select>
+          <br>
+          <div class="span1">
+            <a href="#/phones/new" class="btn">New</a>
+            <a href="#/phones/aggregation" class="btn">Aggregation</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+
+
+    <div class="span6">
+      <ul class="phones">
+        <li ng:repeat="phone in phones | filter : query">  
+          <a href="#/phones/{{phone._id}}">{{phone.name}}</a>
+
+          <a href="#/phones/{{phone._id}}" class="thumb"><img ng:src="{{phone.imageUrl}}"></a>{{phone.teste}}
+          <p>{{phone.snippet}}</p>
+              <button ng-click="edit(phone)"   class="btn btn-primary">Edit</button>
+              <button ng-click="remove(phone)" class="btn btn-danger">Remove</button>
+          <!--
+          -->
+        </li>
+      </ul>   
+    </div>
+  </div>
+
+</div>
