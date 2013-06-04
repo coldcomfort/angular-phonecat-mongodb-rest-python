@@ -12,3 +12,9 @@ Basically a reworking of the AngularJs tutorial using Python for the back end.
 ## Note
 
 **This is very much work in progress.**
+
+The following are remnants from the Node.js version:
+
+* app.js
+* load.js
+* server.js
